@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+//import { Sidebar } from 'antd';
+
+import RideData from "./pages/RideData";
+import { Operational } from "./pages/Operational";
+import UserAnalysis from "./pages/UserAnalysis";
+import CoreMetrics from "./pages/metrics/CoreMetrics";
+import LandingPage from "./pages/landing/LandingPage";
+import RootLayout from "./layouts/RootLayout";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout/>,
+    children: [
+      {index: true, element: <LandingPage/>},
+      { path: "ridedata", element: <RideData /> },
+      { path: "operational", element: <Operational /> },
+      { path: "useranalysis", element: <UserAnalysis /> },
+      { path: "coremetrics", element: <CoreMetrics /> },
+    ],
+  },
+  {
+    
+  }
+]);
+
+const App = () => {
+  return <RouterProvider router={router} />;
+};
 
 export default App;
