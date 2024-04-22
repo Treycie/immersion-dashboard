@@ -1,3 +1,31 @@
+
+
+import './App.css';
+import Barchart from './components/Barchart/index';
+import Doughnutchart from './components/Doughnutchart/index';
+import Legendline from './components/Legendline/index';
+import Linechart from './components/Linechart/index';
+import Map from './components/Map/index';
+
+
+
+
+function App() {
+  return (
+    <div>
+      <Linechart />
+      <Barchart />
+      <Doughnutchart />
+      <Legendline />
+      <Map />
+      
+      
+      
+    </div>
+  );
+}
+
+
 import './App.css';
 import Dashboard from './components/Dashboard.jsx'
 import Test from './components/Test.js';
@@ -15,6 +43,7 @@ function App() {
     </div>
   );
 }
+
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 //import { Sidebar } from 'antd';
