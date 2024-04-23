@@ -17,7 +17,7 @@ const ridesData = [
   
 ];
 
-const index = () => {
+const Map = () => {
   const center = [40.7128, -74.0060]; 
 
   return (
@@ -41,7 +41,7 @@ const index = () => {
   );
 };
 
-export default index;
+export default Map;
 
 
 
@@ -53,53 +53,3 @@ export default index;
 
 
 
-// import React from 'react';
-// import { MapContainer, TileLayer, } from 'react-leaflet';
-
-// const Index = () => {
-//   const center = [40.7128, -74.0060]; 
-
-//   return (
-//     <MapContainer
-//       center={center}
-//       zoom={1}
-//       style={{ height: '100vh', width: '100%' }}
-//     >
-//       <TileLayer
-//         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-//         attribution="Map data &copy; <a href='https://www.mapbox.com/'>Mapbox</a> contributors"
-//         id="mapbox/streets-v11" 
-//       />
-    
-//     </MapContainer>
-//   );
-// };
-
-// export default Index;
-
-
-
-
-
-
-// // import React from 'react';
-// // import { MapContainer, TileLayer, Marker } from 'react-leaflet';
-
-// // const Index = () => {
-// //   return (
-// //     <MapContainer
-// //       center={[51.505, -0.09]}
-// //       zoom={13}
-// //       style={{ height: '400px', width: '100%' }}
-// //     >
-// //       <TileLayer
-// //         url="https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=YOUR_MAPBOX_ACCESS_TOKEN"
-// //         attribution="Map data &copy; <a href='https://www.mapbox.com/'>Mapbox</a> contributors"
-// //         id="mapbox/streets-v11" 
-// //       />
-// //       <Marker position={[51.505, -0.09]} />
-// //     </MapContainer>
-// //   );
-// // };
-
-// // export default Index;

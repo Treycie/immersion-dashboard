@@ -10,7 +10,7 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="sidebar">
+    <div className="sidebar"> 
       <div className="logo">
         <h1 className="logo-icon">YOOKE</h1>
         <h5 className="admin">Admin Dashboard</h5>

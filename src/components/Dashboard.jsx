@@ -1,9 +1,6 @@
 import React from "react";
-import { Avatar, Badge } from "@mui/material";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import MessageIcon from "@mui/icons-material/Message";
-import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
-import SettingsIcon from "@mui/icons-material/Settings";
+
+
 import img1 from "../assets/images/vehicleIcon.svg";
 import img2 from "../assets/images/RegistrationIcon.svg";
 import img3 from "../assets/images/cancelIcon.svg";
@@ -11,6 +8,11 @@ import img4 from "../assets/images/taxiIcon.svg";
 import img5 from "../assets/images/upArrowIcon.svg";
 import img6 from "../assets/images/arrowDownIcon.svg";
 import img7 from "../assets/images/calendar.svg"
+import Barchart from "../pages/landing/components/Graphs/Barchart";
+import Doughnutchart from "../pages/landing/components/Graphs/Doughnutchart";
+import Linechart from "../pages/landing/components/Graphs/Linechart";
+import LegendLine from "../pages/landing/components/Graphs/Legendline";
+
 
 
 
@@ -25,55 +27,18 @@ function App() {
   return (
     <div className="bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white">
       <div className="container mx-auto px-4 py-6">
-        <Header />
+        {/* <Header /> */}
        <div className="flex justify-between">
         <Dashboard />
        <Footer />
-       </div>
         <StatsCards />
+       </div>
+       
       </div>
     </div>
   );
 }
 
-// Header Component
-function Header() {
-  return (
-    <div className="flex justify-between items-center mb-8 ">
-      <div className="flex space-x-4 items-center h-[1400] ">
-        <input
-          type="text"
-          placeholder="Search here"
-          className="px-4 w-[600px] py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 focus:outline-none focus:border-blue-500 dark:focus:border-blue-500"
-        />
-        <Avatar>
-          <Badge badgeContent={21}>
-            <NotificationsNoneIcon />
-          </Badge>
-        </Avatar>
-        <Avatar>
-          <Badge badgeContent={53}>
-            <MessageIcon />
-          </Badge>
-        </Avatar>
-        <Avatar>
-          <Badge badgeContent={15}>
-            <CardGiftcardIcon />
-          </Badge>
-        </Avatar>
-        <Avatar>
-          <Badge badgeContent={19}>
-            <SettingsIcon />
-          </Badge>
-        </Avatar>{" "}
-      </div>
-      <div className="flex gap-2">
-      <div className="h-[40px] w-1 bg-gray-100"></div>
-      <UserProfile />
-      </div>
-    </div>
-  );
-}
 
 // Icon Buttons Component
 function IconButtons() {
@@ -89,15 +54,7 @@ function IconButtons() {
   );
 }
 
-// User Profile Component
-function UserProfile() {
-  return (
-    <div className="flex items-center space-x-2">
-      <span>Hello, Samantha</span>
-      <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
-    </div>
-  );
-}
+
 
 // Dashboard Component
 function Dashboard() {
@@ -134,6 +91,13 @@ function StatsCards() {
           </div>
         </div>
       ))}
+      <div>
+      <Doughnutchart/>
+      <Linechart/>
+      <LegendLine/>
+      {/* <Map/> */}
+      </div>
+
     </div>
   );
 }

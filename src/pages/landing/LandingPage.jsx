@@ -1,10 +1,16 @@
 import React from "react";
-import Dashboard from '../../components/Dashboard'
+import Search from '../../pages/landing/components/Search'
+import Intro from "./components/Intro";
+import { Graphs } from "./components/Graphs";
 
 const LandingPage = () => {
   return (
   <>
-      <Dashboard /> 
+   <Search/>
+   <Intro/>
+   <Graphs/>
+   
+   
   </>
   );
 };

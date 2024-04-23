@@ -11,27 +11,23 @@ const Popularroutes = () => {
 
     // Data
     const data = {
-      labels: ['Route A-B', 'Route D-X','Route E-U','Route S-J','Route A-C'],
+      labels: ['Route A-B', 'Route D-X'],
       datasets: [
         {
           label: 'Rides',
-          data: [3900, 1900,1500,639,57],
-          backgroundColor: ['rgba(231,234,255)', 'rgba(231,234,255)'],
+          data: [3900, 1900],
+          backgroundColor: ['rgba(54, 162, 235, 0.5)', 'rgba(255, 99, 132, 0.5)'],
         },
       ],
     };
 
     // Options
     const options = {
-      indexAxis: 'y', // Display as horizontal bar chart
       responsive: true,
       maintainAspectRatio: false,
       scales: {
         x: {
           beginAtZero: true,
-          ticks: {
-            precision: 0,
-          },
         },
       },
     };
