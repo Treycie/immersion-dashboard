@@ -18,19 +18,19 @@ const Intro = () => {
 
   return (
     <div className="flex flex-col items-baseline my-8 gap-y-4">
-      <div className="flex justify-between">
-        <div className="flex flex-col gap-y-3">
+      <div className="flex justify-between flex-wrap">
+        <div className="flex flex-col gap-y-3 w-full md:w-auto">
           <h1 className="text-2xl font-bold">Dashboard</h1>
-          <p className="">Hi, Samantha. Welcome to Yooke Admin!</p>
+          <p>Hi, Samantha. Welcome to Yooke Admin!</p>
         </div>
            
         {/* Filter period goes here */}
       </div>
       
       {/* Stats card will go here */}
-     <div className="flex flex-row items-baseline gap-2">
+     <div className="flex flex-wrap gap-2">
        {stats.map((stat) => (
-        <div key={stat.label} className={cardBase}>
+        <div key={stat.label} className={cardBase + "mb-4 md:mb-0"}>
           <img
             src={`${stat.src}`}
             alt={`${stat.label} Icon`}

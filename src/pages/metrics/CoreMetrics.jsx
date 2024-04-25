@@ -33,7 +33,7 @@ const CoreMetrics = () => {
             </div>
 
 
-        <div className="max-w-lg mx-auto p-4 bg-white shadow rounded-lg w-full">
+        <div className="mx-auto p-4 bg-white shadow rounded-lg w-full">
             <h2 className="text-lg font-semibold mb-4">Trip Statistics</h2>
             <div className="space-y-2">
                 <div className="flex justify-between items-center p-3 bg-zinc-100 rounded">
@@ -65,8 +65,9 @@ const CoreMetrics = () => {
                 </div>
             </div>
         </div>
+        <div className='p-5'>
         <LegendLine/>
-
+        </div>
     
 
     </div>
